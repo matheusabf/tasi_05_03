@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ordem decrescente</title>
+    <title>Calculo de média</title>
 </head>
 <body>
     
-    <h2>Informe sua altura e seu peso:</h2>
+    <h2>Informe dois números para o cálculo de média:</h2>
     <form action="#" method="post" id="formnumeros">
-        <label for="altura">Informe sua altura em centímetros:</label>
-        <input type="number" id="altura" name="altura" required><br><br>
+        <label for="altura">Número 1:</label>
+        <input type="number" id="num1" name="altura" required><br><br>
 
         
-        <label for="peso">Informe seu peso em quilos:</label>
-        <input type="number" id="peso" name="peso" required><br><br>
+        <label for="peso">Número2:</label>
+        <input type="number" id="num2" name="peso" required><br><br>
 
     </form>
         
-    <button type="submit" onclick="imc()">Enviar</button>
+    <button type="submit" onclick="media()">Enviar</button>
     <p id="resultado"></p>
 
     <script src="./script.js"></script>
