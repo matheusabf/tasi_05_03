@@ -12,7 +12,7 @@ function parouimpar() {
 }
 
 
-function ordemdecrescente() {
+function ordemcrescente() {
 
     var numero1 = parseInt(document.getElementById("numero1").value);
     var numero2 = parseInt(document.getElementById("numero2").value);
@@ -23,54 +23,35 @@ function ordemdecrescente() {
     var numeros = [numero1, numero2, numero3, numero4, numero5];
 
     numeros.sort(function(a, b) {
-        return b - a;
+        return a - b;
     });
 
-    var resultadoHTML = "Números em ordem decrescente: " + numeros.join(", ");
+    var resultadoHTML = "Números em ordem crescente: " + numeros.join(", ");
     document.getElementById("resultado").innerText = resultadoHTML;
 
 }
 
-function imc(){
-    var altura = parseInt(document.getElementById("altura").value)/100;
-    var peso = parseInt(document.getElementById("peso").value);
+function media(){
+    var num1 = parseInt(document.getElementById("num1").value);
+    var num2 = parseInt(document.getElementById("num2").value);
 
-    var resultado = peso/(altura*altura);
+    var resultado = (num1+num2)/2;
 
-    if(resultado <= 18.5){
-        document.getElementById("resultado").innerText = "O seu imc é de: " + resultado + " e você está abaixo do peso.";
-    }
-    else if(resultado > 18.5 && resultado < 25){
-        document.getElementById("resultado").innerText = "O seu imc é de: " + resultado + " e você está no peso ideal.";
-    }
-    else if(resultado >= 25 && resultado < 30){
-        document.getElementById("resultado").innerText = "O seu imc é de: " + resultado + " e você está levemente acima do peso.";
-    }
-    else if(resultado >= 30 && resultado < 35){
-        document.getElementById("resultado").innerText = "O seu imc é de: " + resultado + " e você está em grau de Obesidade I.";
-    }
-    else if(resultado >= 35 && resultado < 40){
-        document.getElementById("resultado").innerText = "O seu imc é de: " + resultado + " e você está em grau de Obesidade II (Severa).";
-    }
-    else if(resultado > 40){
-        document.getElementById("resultado").innerText = "O seu imc é de: " + resultado + " e você está em grau de Obesidade III (Mórbida).";
-    }
+    
+        document.getElementById("resultado").innerText = "A média dos números [" + num1+ " e "+num2+ "] é ["+resultado+"]";
+    
 
 }
 
 
-function triangulo(){
-        var ladoa = parseInt(document.getElementById("numero1").value);
-        var ladob = parseInt(document.getElementById("numero2").value);
-        var ladoc = parseInt(document.getElementById("numero3").value);
+function quadrado(){
+        var valor1 = parseInt(document.getElementById("numero1").value);
+        var valor2 = parseInt(document.getElementById("numero2").value);
+        var valor3 = parseInt(document.getElementById("numero3").value);
 
-    if(ladoa == ladob && ladob == ladoc){
-        document.getElementById("resultado").innerText = "O triângulo é equilátero";
-    }
-    else if(ladoa == ladob || ladob == ladoc || ladoa == ladoc){
-        document.getElementById("resultado").innerText = "O triângulo é isósceles";
-    }
-    else if(ladoa != ladob != ladoc){
-        document.getElementById("resultado").innerText = "O triângulo é escaleno";
-    }
+        var resultado1 = valor1*valor1;
+        var resultado2 = valor2*valor2;
+        var resultado3 = valor3*valor3;
+
+        document.getElementById("resultado").innerText = "O valor do numero 1 ao quadrado é "+resultado1+"\nO valor do numero 2 ao quadrado é "+resultado2+"\nO valor do numero 3 ao quadrado é "+resultado3;
 }
