@@ -3,4 +3,22 @@
     align-items:center;
     text-align:center;
     height:100%;
+    display:flex;
+    flex-direction:row;
+}
+h2{
+    text-align:center;
+    font-size:40px;
+}
+.secao span {
+    padding:50px;
+    border-radius:30px;
+    background-color: #2b2b2b;
+    color: #fff;
+    cursor:pointer;
+}
+.secao a{
+    color: #fff;
+    text-decoration: none;
+    margin:70px;
 }
